@@ -1,0 +1,13 @@
+import mysql.connector 
+
+cnx=(`root`, `pasword=azmiumit20181`, host=`127.0.0.1`, database=`task`)
+
+cursor=cnx.cursor()
+
+users_query=(`select * from ishchi`)
+
+for i in ishchi:
+    print(`adi: %s / soyadi: %s / No: %s / salary: %s / age: %d`)
+
+    cnx.cursor()
+    cnx.close()

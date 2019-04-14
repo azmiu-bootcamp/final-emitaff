@@ -12,3 +12,37 @@ for i in ishchi:
 
     cnx.cursor()
     cnx.close()
+
+
+
+
+
+print ("Ən çox maaş alan işçini tapmaq üçün 1:")
+print ("Ən az maaş alan işçini tapmaq üçün 2:")
+print("Bütün işçilərin adları və onları adlarının qabağında onların aldıqları maaşı cədvəl şəklində göstərmək üçün 3 ədədi daxil edilsin:")
+
+f=int(input("eded daxil et:"))
+
+if f==1:
+users_query=(`select * from max.salary`)
+cursor.execute(users_query)
+result=cursor.fetchall()
+for i in result:
+  print(i)
+  
+if f==2:
+users_query=(`select * from min.salary`)
+cursor.execute(users_query)
+result=cursor.fetchall()
+for i in result:
+  print(i)
+  
+elif f==3:
+users_query=(`select * from ishchi`,salary`)
+cursor.execute(users_query)
+result=cursor.fetchall()
+for i in result:
+  print(i)
+  
+
+  
